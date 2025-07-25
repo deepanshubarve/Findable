@@ -90,5 +90,10 @@ dependencies {
     implementation ("androidx.compose.runtime:runtime-livedata:1.6.8")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
 
+    //coroutines dependency
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
+
+
 
 }
