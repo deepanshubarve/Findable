@@ -15,9 +15,7 @@ import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.handleCoroutineException
 import kotlinx.coroutines.launch
-
 data class AuthUiState(
     val isLoading : Boolean = false,
     val isAuthenticated : Boolean = false,
@@ -33,7 +31,8 @@ class AuthViewModel(application: Application) : AndroidViewModel(application){
     private val authRepository = AuthRepository()
     private val credentialManger = CredentialManager.create(application)
 
-    private val googleWebClintId = "360343145922-fh13s1abh4hm2s3moba587tfd5n1721c.apps.googleusercontent.com"
+    val googleWebClintId = "360343145922-fh13s1abh4hm2s3moba587tfd5n1721c.apps.googleusercontent.com"
+    
 
     init {
         checkCurrentUser()
